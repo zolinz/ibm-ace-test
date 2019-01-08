@@ -2,6 +2,7 @@ node {
 
     def app
 
+  env.DOCKER_API_VERSION="1.23"
 
    stage('clone repo'){
     checkout scm
@@ -10,6 +11,13 @@ node {
 
    stage('build image'){
 
-    app = docker.build("aceappzoli")
+
+        sh """
+        #!/bin/bash
+
+        docker build -t zoliapp .
+        """
    }
+
+
 }
