@@ -15,7 +15,7 @@ node {
         sh """
         #!/bin/bash
 
-        docker login -u admin -p admin
+        docker login mycluster.icp:8500 -u admin -p admin
         docker build -t zoliapp .
         """
    }
