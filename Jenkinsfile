@@ -10,6 +10,6 @@ node {
 
    stage('build image'){
 
-    app = docker.build("ace/aceappzoli")
+    app = docker.build("aceappzoli")
    }
 }
