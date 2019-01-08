@@ -15,6 +15,7 @@ node {
         sh """
         #!/bin/bash
 
+        docker login -u admin -p admin
         docker build -t zoliapp .
         """
    }
