@@ -18,12 +18,6 @@ node {
         docker login  -u admin -p admin mycluster.icp:8500
         docker build -t ${imageName} .
         docker push ${imageName}
-
-
-
-
-
-
         """
    }
 
