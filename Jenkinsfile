@@ -1,6 +1,6 @@
 node {
 
-    imageName = "mycluster.icp:8500/ace/aceappzoli5"
+    imageName = "mycluster.icp:8500/ace/aceappzoli6"
 
 
 
@@ -26,7 +26,7 @@ node {
 
         sh """
         docker login  -u admin -p admin mycluster.icp:8500
-       kubectl get image aceappzoli5 -n=ace -o yaml | sed 's/scope: namespace/scope: global/g' | kubectl replace -f -
+       kubectl get image aceappzoli6 -n=ace -o yaml | sed 's/scope: namespace/scope: global/g' | kubectl replace -f -
          kubectl set image deployment/zoli-ace-01-ibm-ace zoli-ace-01-ibm-ace=${imageName}
 
 
