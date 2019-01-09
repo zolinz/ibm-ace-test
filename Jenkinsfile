@@ -25,6 +25,7 @@ node {
    stage('deploy new image'){
 
         sh """
+        docker login  -u admin -p admin mycluster.icp:8500
          kubectl set image deployment/zoli-ace-01-ibm-ace zoli-ace-01-ibm-ace=${imageName}
 
 
