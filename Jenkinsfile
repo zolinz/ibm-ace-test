@@ -5,12 +5,6 @@ node {
 
 
    stage('clone repo'){
-
-   sh """
-   git config --global --unset https.proxy
-
-
-   """
     checkout scm
    }
 
