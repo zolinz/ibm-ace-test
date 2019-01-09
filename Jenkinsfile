@@ -1,6 +1,6 @@
 node {
 
-    imageName= mycluster.icp:8500/ace/aceappzoli2
+    imageName = "mycluster.icp:8500/ace/aceappzoli2"
 
 
 
