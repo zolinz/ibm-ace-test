@@ -22,6 +22,18 @@ node {
    }
 
 
+   stage('test helm install'){
+    sh"""
+    #!/bin/bash
+
+
+    helm version --tls
+    helm list --tls
+
+    """
+   }
+
+
    stage('deploy new image'){
 
         sh """
