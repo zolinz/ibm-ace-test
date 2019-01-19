@@ -31,7 +31,7 @@ node {
    #kubectl patch deploy --namespace kube-system tiller-deploy -p '{"spec":{"template":{"spec":{"serviceAccount":"tiller"}}}}'
 
 
-   helm init --service-account tiller --upgrade
+   helm init --client-only
    helm version --tls
    helm list --tls
 
