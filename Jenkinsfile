@@ -30,9 +30,9 @@ node {
    #kubectl create clusterrolebinding tiller-cluster-rule --clusterrole=cluster-admin --serviceaccount=kube-system:tiller
    #kubectl patch deploy --namespace kube-system tiller-deploy -p '{"spec":{"template":{"spec":{"serviceAccount":"tiller"}}}}'
 
-   sysctl -w net.ipv6.conf.all.disable_ipv6=1
+   #sysctl -w net.ipv6.conf.all.disable_ipv6=1
 
-   helm init --client-only
+   #helm init --client-only
    helm version --tls
    helm list --tls
 
