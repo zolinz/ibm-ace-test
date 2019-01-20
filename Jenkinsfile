@@ -32,7 +32,7 @@ node {
 
    #sysctl -w net.ipv6.conf.all.disable_ipv6=1
 
-   #helm init --client-only
+   helm init --client-only --debug
    helm version --tls
    helm list --tls
 
