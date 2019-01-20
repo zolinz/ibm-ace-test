@@ -34,6 +34,7 @@ node {
 
 
    helm init --client-only --debug
+   sleep infinity
    helm version --tls
    helm list --tls
 
