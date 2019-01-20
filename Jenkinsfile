@@ -2,7 +2,7 @@ node {
 
     imageName = "mycluster.icp:8500/ace/aceappzoli7"
 
- ---
+ /*
 
    stage('clone repo'){
     checkout scm
@@ -21,7 +21,7 @@ node {
         """
    }
 
----
+*/
    stage('test helm install'){
     sh"""
     #!/bin/bash
@@ -43,7 +43,7 @@ node {
     """
    }
 
----
+/*
    stage('deploy new image'){
 
         sh """
@@ -57,6 +57,6 @@ node {
         """
 
    }
----
+*/
 
 }
