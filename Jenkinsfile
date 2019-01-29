@@ -30,8 +30,8 @@ node {
             echo \$CODE_DIR
            # sleep infinity
            echo /root/workspace/pipelinetest/\${CODE_DIR}
-            mqsicreatebar -data /root/workspace/pipelinetest/\${CODE_DIR} -b zolitest2.bar -a MyRest2
-            mqsicreatebar -data /root/workspace/pipelinetest/\${CODE_DIR} -b zolitest2.bar -a MyRest2
+            mqsicreatebar -data /root/workspace/pipelinetest/\${CODE_DIR}/ -b zolitest2.bar -a MyRest2
+            mqsicreatebar -data /root/workspace/pipelinetest/\${CODE_DIR}/ -b zolitest2.bar -a MyRest2
        """
 
    }
