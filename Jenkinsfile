@@ -2,6 +2,7 @@ node {
 
     imageName = "mycluster.icp:8500/ace/aceappzoli8"
 
+    def CODE_DIR
 
 
    stage('clone repo'){
@@ -22,7 +23,7 @@ node {
              cd /opt/ibm/ace-11.0.0.2
              ./ace make registry global accept license silently
             . /opt/ibm/ace-11.0.0.2/server/bin/mqsiprofile
-            EXPORT CODE_DIR=`ls | egrep  '.*[^tmp]\$'`
+            CODE_DIR=`ls | egrep  '.*[^tmp]\$'`
             echo $CODE_DIR
             sleep infinity
             mqsicreatebar -data /root/workspace/pipelinetest/\$CODE_DIR -b zolitest2.bar -a MyRest2
