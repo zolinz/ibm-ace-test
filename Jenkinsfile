@@ -1,8 +1,8 @@
 node {
 
-    imageName = "mycluster.icp:8500/ace/aceappzoli7"
+    imageName = "mycluster.icp:8500/ace/aceappzoli8"
 
- /*
+
 
    stage('clone repo'){
     checkout scm
@@ -42,7 +42,8 @@ node {
         """
    }
 
-*/
+/*
+
    stage('test helm install'){
     sh"""
     #!/bin/bash
@@ -64,12 +65,12 @@ node {
     """
    }
 
-/*
+*/
    stage('deploy new image'){
 
         sh """
         docker login  -u admin -p admin mycluster.icp:8500
-       kubectl get image aceappzoli7 -n=ace -o yaml | sed 's/scope: namespace/scope: global/g' | kubectl replace -f -
+       kubectl get image aceappzoli8 -n=ace -o yaml | sed 's/scope: namespace/scope: global/g' | kubectl replace -f -
          kubectl set image deployment/zoli-ace-01-ibm-ace zoli-ace-01-ibm-ace=${imageName}
 
 
@@ -78,6 +79,6 @@ node {
         """
 
    }
-*/
+
 
 }
