@@ -2,8 +2,6 @@ node {
 
     imageName = "mycluster.icp:8500/ace/aceappzoli8"
 
-    def CODE_DIR
-    def OLDPWD
 
 
    stage('clone repo'){
@@ -25,11 +23,11 @@ node {
             . /opt/ibm/ace-11.0.0.2/server/bin/mqsiprofile
             cd /root/workspace
             pwd
-            echo $OLDPWD
+            echo \$OLDPWD
             ls | egrep  '.*[^tmp]\$'
             CODE_DIR=`ls | egrep  '.*[^tmp]\$'`
             export CODE_DIR
-            echo $CODE_DIR
+            echo \$CODE_DIR
             sleep infinity
             mqsicreatebar -data /root/workspace/pipelinetest/\$CODE_DIR -b zolitest2.bar -a MyRest2
             mqsicreatebar -data /root/workspace/pipelinetest/\$CODE_DIR -b zolitest2.bar -a MyRest2
