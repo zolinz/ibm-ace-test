@@ -21,6 +21,7 @@ node {
              cd /opt/ibm/ace-11.0.0.2
              ./ace make registry global accept license silently
             . /opt/ibm/ace-11.0.0.2/server/bin/mqsiprofile
+            sleep infinity
             mqsicreatebar -data /root/workspace/pipelinetest/ -b zolitest2.bar -a MyRest2
             mqsicreatebar -data /root/workspace/pipelinetest/ -b zolitest2.bar -a MyRest2
        """
