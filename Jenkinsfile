@@ -22,6 +22,7 @@ node {
              cd /opt/ibm/ace-11.0.0.2
              ./ace make registry global accept license silently
             . /opt/ibm/ace-11.0.0.2/server/bin/mqsiprofile
+            cd /root/workspace
             CODE_DIR=`ls | egrep  '.*[^tmp]\$'`
             export CODE_DIR
             echo $CODE_DIR
