@@ -3,6 +3,7 @@ node {
     imageName = "mycluster.icp:8500/ace/aceappzoli8"
 
     def CODE_DIR
+    def OLDPWD
 
 
    stage('clone repo'){
