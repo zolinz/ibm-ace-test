@@ -2,7 +2,7 @@ node {
 
     imageName = "mycluster.icp:8500/ace/aceappzoli8"
 
-
+    CODE_DIR
 
 
    stage('clone repo'){
