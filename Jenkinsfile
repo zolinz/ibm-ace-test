@@ -24,6 +24,7 @@ node {
             . /opt/ibm/ace-11.0.0.2/server/bin/mqsiprofile
             cd /root/workspace
             pwd
+            echo $OLDPWD
             CODE_DIR=`ls | egrep  '.*[^tmp]\$'`
             export CODE_DIR
             echo $CODE_DIR
