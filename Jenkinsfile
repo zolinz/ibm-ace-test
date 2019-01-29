@@ -26,6 +26,7 @@ node {
             cd /root/workspace
             pwd
             echo $OLDPWD
+            ls | egrep  '.*[^tmp]\$'
             CODE_DIR=`ls | egrep  '.*[^tmp]\$'`
             export CODE_DIR
             echo $CODE_DIR
