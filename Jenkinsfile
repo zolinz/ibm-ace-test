@@ -29,8 +29,8 @@ node {
             export CODE_DIR
             echo \$CODE_DIR
            # sleep infinity
-            mqsicreatebar -data /root/workspace/pipelinetest/\$CODE_DIR -b zolitest2.bar -a MyRest2
-            mqsicreatebar -data /root/workspace/pipelinetest/\$CODE_DIR -b zolitest2.bar -a MyRest2
+            mqsicreatebar -data /root/workspace/pipelinetest/\${CODE_DIR} -b zolitest2.bar -a MyRest2
+            mqsicreatebar -data /root/workspace/pipelinetest/\${CODE_DIR} -b zolitest2.bar -a MyRest2
        """
 
    }
